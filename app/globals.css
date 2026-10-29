@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/*
+  Medixis : tokens de design.
+  Thème clair sur papier légèrement chaud ; bleu marine du logo en aplats francs,
+  turquoise du logo réservé aux signaux (puces, liens actifs, filets d'accent).
+  Grammaire de catalogue : filets fins, index numérotés, pas d'ombres décoratives.
+*/
+:root {
+  --color-ink: oklch(0.22 0.035 266);
+  --color-muted: oklch(0.47 0.02 266);
+
+  --color-navy: oklch(0.36 0.12 268);
+  --color-navy-deep: oklch(0.25 0.09 268);
+  --color-navy-soft: oklch(0.42 0.08 262);
+
+  --color-teal: oklch(0.76 0.1 186);
+  --color-teal-ink: oklch(0.52 0.09 188);
+  --color-teal-soft: oklch(0.95 0.025 186);
+
+  --color-paper: oklch(0.982 0.006 85);
+  --color-paper-alt: oklch(0.955 0.01 85);
+  --color-line: oklch(0.88 0.012 85);
+  --color-line-strong: oklch(0.22 0.035 266 / 0.85);
+
+  --gradient-brand: linear-gradient(90deg, oklch(0.76 0.1 186) 0%, oklch(0.36 0.12 268) 100%);
+
+  --shadow-card: 0 1px 2px oklch(0.2 0.03 262 / 0.05), 0 6px 18px oklch(0.2 0.03 262 / 0.06);
+  --shadow-lift: 0 14px 34px oklch(0.2 0.03 262 / 0.14);
+
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section: clamp(4.5rem, 10vw, 8.5rem);
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-navy: var(--color-navy);
+  --color-navy-deep: var(--color-navy-deep);
+  --color-navy-soft: var(--color-navy-soft);
+  --color-teal: var(--color-teal);
+  --color-teal-ink: var(--color-teal-ink);
+  --color-teal-soft: var(--color-teal-soft);
+  --color-paper: var(--color-paper);
+  --color-paper-alt: var(--color-paper-alt);
+  --color-line: var(--color-line);
+  --color-line-strong: var(--color-line-strong);
+  --font-sans: var(--font-archivo);
+  --shadow-card: var(--shadow-card);
+  --shadow-lift: var(--shadow-lift);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; color-scheme: light; }
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-feature-settings: "tnum" 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Titres : Archivo en largeur étendue, interlettrage serré. */
+.display {
+  font-stretch: 118%;
+  font-variation-settings: "wdth" 118;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  font-weight: 700;
+}
+.display-sm {
+  font-stretch: 112%;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.018em;
+  line-height: 1.08;
+  font-weight: 650;
+}
+/* Références de catalogue (MX-01, dates) : chiffres tabulaires. */
+.ref { font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+
+.wrap { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section); }
+/* Accueil : sections plus resserrées. */
+.home { --section: clamp(3rem, 6vw, 5rem); }
+/* Accueil : titre du bandeau final sur deux lignes. */
+.home .cta-title { font-size: clamp(1.75rem, 3.4vw, 2.75rem); }
+/* Blocs photo + texte : même largeur maximale que le contenu. */
+.split { max-width: 72rem; margin-inline: auto; }
+
+.bg-brand { background-image: var(--gradient-brand); }
+
+/* Lien souligné qui s'épaissit au survol, sans décaler la mise en page. */
+.link-rule {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  transition: text-decoration-thickness 0.2s, text-decoration-color 0.2s;
+}
+.link-rule:hover { text-decoration-thickness: 2px; text-decoration-color: var(--color-teal-ink); }
+
+::selection { background: var(--color-teal); color: var(--color-navy-deep); }
+
+:focus-visible { outline: 2px solid var(--color-teal-ink); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@keyframes fadein { from { opacity: 0 } to { opacity: 1 } }
