@@ -3,9 +3,9 @@ export const SITE_URL = 'https://medixis.ma'
 
 export const CONTACT = {
   // Numéro repris du devis du 14/10/2026 — à confirmer comme numéro public de Medixis.
-  phone: '+212661330704',
-  phoneDisplay: '+212 6 61 33 07 04',
-  whatsappNumber: '212661330704',
+  phone: '+212669182123',
+  phoneDisplay: '+212 6 69 18 21 23',
+  whatsappNumber: '212669182123',
   cityFr: 'Casablanca, Maroc',
   cityEn: 'Casablanca, Morocco',
 }
