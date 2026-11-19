@@ -4,7 +4,7 @@ import { ProductCatalog } from '@/components/products/ProductCatalog'
 
 export const metadata: Metadata = {
   title: 'Portefeuille produits | Medixis',
-  description: 'Endoscopie, stérilisation, sutures, ablation et électrochirurgie : les dispositifs médicaux distribués par Medixis au Maroc.',
+  description: 'Endoscopie, stérilisation, sutures et électrochirurgie : les dispositifs médicaux distribués par Medixis au Maroc.',
   alternates: { canonical: '/produits' },
 }
 

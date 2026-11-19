@@ -172,31 +172,6 @@ const RANGE_SEEDS: RangeSeed[] = [
     ],
   },
   {
-    slug: 'ablation',
-    name: { fr: 'Ablation tumorale', en: 'Tumor ablation' },
-    summary: {
-      fr: 'Radiofréquence, micro-ondes et électroporation : trois technologies d’ablation.',
-      en: 'Radiofrequency, microwave and electroporation: three ablation technologies.',
-    },
-    body: {
-      fr: 'Medixis propose des systèmes d’ablation par radiofréquence, par micro-ondes et par électroporation, pour permettre à chaque équipe de choisir la technique adaptée à l’indication.',
-      en: 'Medixis offers radiofrequency, microwave and electroporation ablation systems, so each team can choose the technique suited to the indication.',
-    },
-    image: PHOTO.ablation,
-    // [À CONFIRMER] marque : Surgnova ou Dophi.
-    products: [
-      product('ablation-radiofrequence', 'Ablation par radiofréquence', undefined, PHOTO.ablation,
-        { fr: 'Générateur et électrodes d’ablation par radiofréquence.', en: 'Radiofrequency ablation generator and electrodes.' },
-        { fr: ['Technologie radiofréquence', 'Formation des équipes'], en: ['Radiofrequency technology', 'Team training'] }),
-      product('ablation-micro-ondes', 'Ablation par micro-ondes', undefined, PHOTO.ablation,
-        { fr: 'Système d’ablation par micro-ondes et antennes associées.', en: 'Microwave ablation system and matching antennas.' },
-        { fr: ['Technologie micro-ondes', 'Formation des équipes'], en: ['Microwave technology', 'Team training'] }),
-      product('electroporation', 'Électroporation', undefined, PHOTO.ablation,
-        { fr: 'Système d’ablation par électroporation.', en: 'Electroporation ablation system.' },
-        { fr: ['Technologie d’électroporation', 'Formation des équipes'], en: ['Electroporation technology', 'Team training'] }),
-    ],
-  },
-  {
     slug: 'electrochirurgie',
     name: { fr: 'Générateurs ultrasoniques et électrochirurgicaux', en: 'Ultrasonic and electrosurgical generators' },
     summary: {
@@ -208,7 +183,6 @@ const RANGE_SEEDS: RangeSeed[] = [
       en: 'This generator combines ultrasonic energy and electrosurgery in one system: surgeons cut and coagulate vessels without switching devices.',
     },
     image: PHOTO.electrochirurgie,
-    // [À CONFIRMER] marque.
     products: [
       product('generateur-ultrasonique-electrochirurgical', 'Générateur ultrasonique et électrochirurgical', undefined, PHOTO.electrochirurgie,
         { fr: 'Un seul générateur pour couper et coaguler les vaisseaux.', en: 'One generator to cut and coagulate vessels.' },

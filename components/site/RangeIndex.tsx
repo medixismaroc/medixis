@@ -29,8 +29,7 @@ export function RangeIndex({ ranges }: { ranges: Range[] }) {
                 <span>
                   <span className="display-sm block text-[clamp(1.35rem,2.6vw,2rem)] text-ink">{t(r.name.fr, r.name.en)}</span>
                   <span className="mt-1.5 block text-sm text-muted">
-                    {brands.length > 0 ? brands.join(' · ') : t('Marque en cours de confirmation', 'Brand being confirmed')}
-                    {' · '}
+                    {brands.length > 0 && <>{brands.join(' · ')}{' · '}</>}
                     {r.products.length} {r.products.length > 1 ? t('produits', 'products') : t('produit', 'product')}
                   </span>
                 </span>

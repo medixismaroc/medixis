@@ -3,7 +3,7 @@
 register: brand
 
 ## Product purpose
-Site vitrine de Medixis, distributeur de dispositifs médicaux basé à Casablanca (vente, distribution, import). Gammes : endoscopie (Shenda by Lepu Medical), stérilisation (Wego), fils de suture (Pine BM), ablation tumorale, générateurs ultrasoniques et électrochirurgicaux. Deux à trois gammes s'ajoutent après MEDICA 2026.
+Site vitrine de Medixis, distributeur de dispositifs médicaux basé à Casablanca (vente, distribution, import). Gammes : endoscopie (Shenda by Lepu Medical), stérilisation (Wego), fils de suture (Pine BM), générateurs ultrasoniques et électrochirurgicaux. Deux à trois gammes s'ajoutent après MEDICA 2026.
 
 ## Users
 - Acheteurs et directeurs d'établissements de santé au Maroc (cliniques privées, hôpitaux), sur ordinateur au bureau.

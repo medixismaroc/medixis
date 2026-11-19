@@ -13,7 +13,7 @@ export function RangeDetail({ range, index, prev, next }: { range: Range; index:
   const t = useT()
   const brands = [...new Set(range.products.map((p) => p.brand).filter(Boolean))] as string[]
   const facts: [string, string][] = [
-    [t('Marque', 'Brand'), brands.join(', ') || t('En cours de confirmation', 'Being confirmed')],
+    ...(brands.length > 0 ? [[t('Marque', 'Brand'), brands.join(', ')] as [string, string]] : []),
     [t('Produits', 'Products'), String(range.products.length)],
     [t('Documentation', 'Documentation'), t('Fiches techniques sur demande', 'Data sheets on request')],
     [t('Inclus', 'Included'), t('Installation, formation, suivi', 'Installation, training, follow-up')],

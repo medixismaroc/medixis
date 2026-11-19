@@ -51,8 +51,8 @@ export function CompanyPage() {
           <Reveal delay={0.08} className="space-y-5 leading-relaxed text-muted lg:col-span-4 lg:col-start-9">
             <p>
               {t(
-                'Nos premiers partenaires couvrent l’endoscopie, la stérilisation, les sutures, l’ablation tumorale et l’électrochirurgie. De nouvelles gammes viendront compléter l’offre après le salon MEDICA 2026.',
-                'Our first partners cover endoscopy, sterilization, sutures, tumor ablation and electrosurgery. New ranges will complete the offer after MEDICA 2026.'
+                'Nos premiers partenaires couvrent l’endoscopie, la stérilisation, les sutures et l’électrochirurgie. De nouvelles gammes viendront compléter l’offre après le salon MEDICA 2026.',
+                'Our first partners cover endoscopy, sterilization, sutures and electrosurgery. New ranges will complete the offer after MEDICA 2026.'
               )}
             </p>
             <Link href="/specialites" className="link-rule inline-block font-semibold text-ink">{t('Voir les spécialités', 'See the specialties')}</Link>

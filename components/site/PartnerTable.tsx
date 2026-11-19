@@ -11,11 +11,10 @@ const LOGO: Record<string, string> = {
   'Pine BM': '/img/partenaires/pine-bm.png',
 }
 
-/** Partenaires industriels sur l'accueil : une ligne par marque, puis les gammes dont la marque reste à confirmer. */
+/** Partenaires industriels sur l'accueil : une ligne par marque. */
 export function PartnerTable({ brands, ranges }: { brands: Brand[]; ranges: Range[] }) {
   const t = useT()
   const rangeOf = (name: string) => ranges.find((r) => r.products.some((p) => p.brand?.startsWith(name)))
-  const unbranded = ranges.filter((r) => r.products.length > 0 && r.products.every((p) => !p.brand))
 
   return (
     <section id="partenaires" className="section border-t border-line">
@@ -55,12 +54,6 @@ export function PartnerTable({ brands, ranges }: { brands: Brand[]; ranges: Rang
               </Reveal>
             )
           })}
-          {unbranded.length > 0 && (
-            <div className="grid gap-2 border-b border-line py-7 md:grid-cols-12 md:items-baseline md:gap-6">
-              <p className="display-sm text-xl text-muted md:col-span-4">{t('Marques en cours de confirmation', 'Brands being confirmed')}</p>
-              <p className="text-ink md:col-span-8">{unbranded.map((r) => t(r.name.fr, r.name.en)).join(' · ')}</p>
-            </div>
-          )}
         </div>
 
         <p className="mt-10 text-muted">

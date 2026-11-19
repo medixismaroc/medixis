@@ -17,7 +17,7 @@ export function ProductCard({ product: p }: { product: Product }) {
       </div>
       <p className="mt-4 text-xs font-medium text-teal-ink">{t(p.rangeName.fr, p.rangeName.en)}</p>
       <h3 className="display-sm mt-1.5 text-lg text-ink decoration-1 underline-offset-4 group-hover:underline">{p.name}</h3>
-      <p className="mt-1 text-sm text-muted">{p.brand ?? t('Marque en cours de confirmation', 'Brand being confirmed')}</p>
+      {p.brand && <p className="mt-1 text-sm text-muted">{p.brand}</p>}
     </Link>
   )
 }

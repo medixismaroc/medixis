@@ -40,8 +40,8 @@ export function HomePage({ ranges, brands, posts }: { ranges: Range[]; brands: B
               </motion.h1>
               <motion.p {...enter(0.12)} className="mt-[3svh] max-w-[52ch] text-base leading-relaxed text-muted lg:text-lg">
                 {t(
-                  'Medixis importe et distribue des dispositifs médicaux pour les cliniques et les hôpitaux du Maroc : endoscopie, stérilisation, sutures, ablation et électrochirurgie. Installation, formation et suivi compris.',
-                  'Medixis imports and distributes medical devices for clinics and hospitals in Morocco: endoscopy, sterilization, sutures, ablation and electrosurgery. Installation, training and follow-up included.'
+                  'Medixis importe et distribue des dispositifs médicaux pour les cliniques et les hôpitaux du Maroc : endoscopie, stérilisation, sutures et électrochirurgie. Installation, formation et suivi compris.',
+                  'Medixis imports and distributes medical devices for clinics and hospitals in Morocco: endoscopy, sterilization, sutures and electrosurgery. Installation, training and follow-up included.'
                 )}
               </motion.p>
               <motion.div {...enter(0.18)} className="mt-[4svh] flex flex-wrap items-center gap-x-8 gap-y-3">

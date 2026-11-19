@@ -38,7 +38,7 @@ export function ProductDetail({ product: p, related }: { product: Product; relat
           </Reveal>
 
           <Reveal delay={0.08} className="lg:col-span-5">
-            <p className="text-sm font-medium text-teal-ink">{p.brand ?? t('Marque en cours de confirmation', 'Brand being confirmed')}</p>
+            {p.brand && <p className="text-sm font-medium text-teal-ink">{p.brand}</p>}
             <h1 className="display mt-3 text-[clamp(2.2rem,4.5vw,3.5rem)] text-ink">{p.name}</h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">{t(p.description.fr, p.description.en)}</p>
 
